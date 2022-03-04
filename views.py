@@ -9,3 +9,9 @@ def lista_produtos(request):
 
 def busca_produtos(request):
     return render()
+
+def exibir_form(request):
+    return render(request,"form.html", {})
+
+def inserir(request):
+    return render(request,"form.html", {})
