@@ -11,11 +11,7 @@ produtos = ProdutoDAO().listar_produtos()
 def lista_produtos(request):
     return render(request, "index.html",{'produtos' : produtos})
 
-def busca_produtos(request):
-    return render()
+def produto_detalhes(request,id:int):
+    return render(request, "produtos.html", {'produtos': produtos,'id':id})
 
-def exibir_form(request):
-    return render(request,"form.html", {})
 
-def inserir(request):
-    return render(request,"form.html", {})
