@@ -1,11 +1,15 @@
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from pdjango.models import ProdutoDAO
+from pdjango.forms import adicionar
 
-def hello_world(request, name):
-    return render(request, "index.html",{'name':name})
+from pdjango.models import Produtos
+
+produtos = ProdutoDAO().listar_produtos()
 
 def lista_produtos(request):
-    return render(request, "produtos.html")
+    return render(request, "index.html",{'produtos' : produtos})
 
 def busca_produtos(request):
     return render()

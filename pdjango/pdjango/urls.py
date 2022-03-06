@@ -17,7 +17,7 @@ from pdjango import views
 from django.urls import path
 
 urlpatterns = [
-    path('hello/<str:name>', views.hello_world),
+    path('produtos/',views.lista_produtos),
     path('form/',views.exibir_form),
     path('inserir/',views.inserir)
 ]
