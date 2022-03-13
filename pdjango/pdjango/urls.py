@@ -18,6 +18,7 @@ from django.urls import path
 
 urlpatterns = [
     path('produtos/',views.lista_produtos, name = 'Home'),
-    path('produtos/<int:id>',views.produto_detalhes)
+    path('produtos/<int:id>',views.produto_detalhes),
+    path('add/',views.add)
     
 ]

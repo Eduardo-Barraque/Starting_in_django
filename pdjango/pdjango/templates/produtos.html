@@ -7,14 +7,10 @@
     <title>Produto {{produto.nome}}</title>
 </head>
 <body>
-    {%for produto in produtos%}
-        {%if produto.id == id %}
-            <h1>{{produto.nome}}</h1>
-            <img src="{{produto.imagem}}" alt="Imagem do produto">
-            <p>Por apenas R${{produto.price}},00</p>
-            <p>{{produto.description}}</p>
-        {%endif%}
-    {%endfor%}
-    <button><a href="{%url 'Home'%}">Voltar</a></button>
+    <h1>{{produto.nome}}</h1>
+    <img src="{{produto.imagem}}" alt="Imagem do produto">
+    <p>Por apenas R${{produto.price}},00</p>
+    <p>{{produto.description}}</p>
+    <a href="{%url 'Home'%}"><button>Voltar</button></a>
 </body>
 </html>
