@@ -57,3 +57,21 @@ class Categoria:
     @property
     def listaVideos(self):
         return self.__listaVideos
+
+
+class CategoriaDao:
+    def __init__(self):
+        self.__categorias = []
+
+        video_acao1 = Video(1, "FreeGuy.mp4", 'img/Free_Guy_poster.jpg', "Free Guy - Assumindo Controle",
+                           "Um caixa de banco preso a uma entediante rotina tem sua vida virada de cabeça para baixo quando descobre que é um personagem em um jogo interativo. Agora ele precisa aceitar sua realidade e lidar com o fato de que é o único que pode salvar o mundo."
+                           , "18.578.058", "1.099.999", '19/08/2021')
+        video_acao2 = Video(2, "DeadPool.mp4", "img/DeadPool.jpg", "DeadPool",
+                           "Wade Wilson é um ex-agente especial que passou a trabalhar como mercenário. Seu mundo é destruído quando um cientista maligno o tortura e o desfigura completamente. O experimento brutal transforma Wade em Deadpool, que ganha poderes especiais de cura e uma força aprimorada. Com a ajuda de aliados poderosos e um senso de humor mais desbocado e cínico do que nunca, o irreverente anti-herói usa habilidades e métodos violentos para se vingar do homem que quase acabou com a sua vida."
+                           , "24.670.369", "1.877.547", '11/02/2016')
+        acao = Categoria("Ação", [video_acao1])
+        aventura = Categoria("Aventura", [video_acao2])
+        self.__categorias = [acao, aventura]
+
+    def categorias(self):
+        return self.__categorias

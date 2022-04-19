@@ -1,0 +1,20 @@
+video{
+    width: 100vh;
+}
+.navbarzinha{
+    background-color: #4e555b;
+    color: black;
+}
+.titulo{font-size: 5vh}
+body{}
+.categorias{
+
+}
+.like{
+    width: 4vh;
+    height: auto;
+}
+.likebar{
+    display: flex;
+    flex-direction: row;
+}
