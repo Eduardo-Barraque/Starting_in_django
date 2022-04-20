@@ -10,7 +10,7 @@
     <div class="produtos">
         {%for produto in produtos%}
             <div class="produto">
-                <h2>{{produto.nome}}</h2>
+                <h2>{{produto.nome}}.</h2>
                 <img src="{{produto.imagem}}" alt="produto {{produto.id}}">
                 <p>Por apenas R${{produto.price}},00</p>
                 <a href="{{produto.id}}"><button>Mais Detalhes</button></a>
